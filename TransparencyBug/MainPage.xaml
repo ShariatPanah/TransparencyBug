@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TransparencyBug.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <AbsoluteLayout>
+
+        <RoundRectangle
+            AbsoluteLayout.LayoutBounds="-20,-20"
+            CornerRadius="70"
+            Fill="LimeGreen"
+            HeightRequest="85"
+            WidthRequest="85" />
+
+        <Label
+            AbsoluteLayout.LayoutBounds="0.5, 10"
+            AbsoluteLayout.LayoutFlags="XProportional"
+            FontAttributes="Bold"
+            FontFamily="IranSansBold"
+            FontSize="Medium"
+            HorizontalOptions="CenterAndExpand"
+            Text="Profile"
+            TextColor="Black"
+            VerticalOptions="Center" />
+
+        <RoundRectangle
+            x:Name="infoBoxView"
+            AbsoluteLayout.LayoutBounds="1,-20"
+            AbsoluteLayout.LayoutFlags="XProportional"
+            CornerRadius="70"
+            Fill="Orange"
+            HeightRequest="85"
+            WidthRequest="85" />
+
+        <ImageButton
+            x:Name="infoIcon"
+            Padding="16"
+            AbsoluteLayout.LayoutBounds="330,-15"
+            BackgroundColor="Transparent"
+            CornerRadius="10"
+            HeightRequest="80"
+            Source="info_icon.svg"
+            WidthRequest="80" />
+
+        <ScrollView AbsoluteLayout.LayoutBounds="0.5,0" AbsoluteLayout.LayoutFlags="PositionProportional">
+            <VerticalStackLayout Spacing="25" VerticalOptions="Center">
+
+                <Image
+                    HeightRequest="200"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                    Source="dotnet_bot.png" />
+
+                <Label
+                    FontSize="32"
+                    HorizontalOptions="Center"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Hello, World!" />
+
+                <Label
+                    FontSize="18"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                    SemanticProperties.HeadingLevel="Level2"
+                    Text="Welcome to .NET Multi-platform App UI" />
+
+                <Button
+                    x:Name="CounterBtn"
+                    Clicked="OnCounterClicked"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Text="Show Modal" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </AbsoluteLayout>
+</ContentPage>
